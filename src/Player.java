@@ -7,6 +7,7 @@ public class Player {
     private int health;
     private int money;
     private Inventory inventory;
+    private int realHealth;
 
     Scanner scanner = new Scanner(System.in);
 
@@ -22,7 +23,7 @@ public class Player {
                 break;
             // archer selected
             case 2:
-                initPlayer("Samurai",7,18,20);
+                initPlayer("Archer",7,18,20);
                 break;
             // knight selected
             case 3:
@@ -42,6 +43,7 @@ public class Player {
         setDamage(damage);
         setHealth(health);
         setMoney(money);
+        setRealHealth(health);
     }
 
     public int charMenu() {
@@ -104,5 +106,13 @@ public class Player {
 
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
+    }
+
+    public int getRealHealth() {
+        return realHealth;
+    }
+
+    public void setRealHealth(int realHealth) {
+        this.realHealth = realHealth;
     }
 }
