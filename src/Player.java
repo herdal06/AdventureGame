@@ -54,7 +54,7 @@ public class Player {
         System.out.println("1. Samurai \t Damage : 5 \t Health : 21 \t Money : 15");
         System.out.println("2. Archer \t Damage : 7 \t Health : 18 \t Money : 20");
         System.out.println("3. Knight \t Damage : 8 \t Health : 24 \t Money : 5");
-        System.out.println("What is your choose ?");
+        System.out.println("What is your choice ?");
         int charID = scanner.nextInt();
         while(charID < 1 || charID > 3) {
             System.out.println("Please select a valid character.");

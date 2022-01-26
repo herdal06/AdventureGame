@@ -59,7 +59,7 @@ public class Toolstore extends NormalLocation {
                 case 1:
                     avoid = 1;
                     armorName = "Light armor";
-                    price = 15;
+                    price = 25;
                     break;
                 case 2:
                     avoid = 3;
