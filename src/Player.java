@@ -13,6 +13,7 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
+        this.inventory = new Inventory();
     }
 
     public void selectChar() {
@@ -34,10 +35,12 @@ public class Player {
                 initPlayer("Samurai",5,21,15);
                 break;
         }
-        System.out.println("Your  character has been created.");
+        System.out.println("Your character has been created.");
         System.out.println("Character : "+getCharName()+", Damage : "+getDamage()+", Health : "+getHealth()+", Money : "+getMoney());
     }
-
+    public int getTotalDamage() {
+        return this.getDamage() + this.getInventory().getDamage();
+    }
     public void initPlayer(String charName, int damage, int health, int money) {
         setCharName(charName);
         setDamage(damage);

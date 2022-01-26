@@ -38,6 +38,9 @@ public class Game {
                case 1:
                    location = new Safehouse(player);
                    break;
+               case 5:
+                   location = new Toolstore(player);
+                   break;
                default: // safehouse is default location.
                    location = new Safehouse(player);
                    break;
