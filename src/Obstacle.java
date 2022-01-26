@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Obstacle {
     private String name;
     private int damage;
@@ -11,6 +13,12 @@ public class Obstacle {
         this.award = award;
         this.health = health;
         this.maxNumber = maxNumber;
+    }
+
+    // random obstacle number
+    public int count() {
+        Random random = new Random();
+        return random.nextInt(this.maxNumber) + 1;
     }
 
     public String getName() {
