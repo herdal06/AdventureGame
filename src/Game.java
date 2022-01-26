@@ -40,8 +40,10 @@ public class Game {
                    break;
                case 2:
                    location = new Cave(player);
+                   break;
                case 3:
                    location = new Forest(player);
+                   break;
                case 4:
                    location = new River(player);
                    break;
@@ -51,6 +53,12 @@ public class Game {
                default: // safehouse is default location.
                    location = new Safehouse(player);
                    break;
+           }
+           if(location.getClass().getName().equals("Safehouse")) {
+               if(player.getInventory().isFirewood() && player.getInventory().isFood() && player.getInventory().isWater()) {
+                   System.out.println("Congrats. You have won the game !!!");
+                   break;
+               }
            }
            if(!location.getLocation()) {
                System.out.println("Game Over...");

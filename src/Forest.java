@@ -1,5 +1,5 @@
 public class Forest extends BattleLocation{
-    public Forest(Player player) {
+    Forest(Player player) {
         super(player, "Forest", new Vampire(), "Firewood");
     }
 }
