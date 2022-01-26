@@ -18,35 +18,30 @@ public class Player {
         switch (charMenu()) {
             // samurai selected
             case 1:
-                setCharName("Samurai");
-                setDamage(5);
-                setHealth(21);
-                setMoney(15);
+                initPlayer("Samurai",5,21,15);
                 break;
             // archer selected
             case 2:
-                setCharName("Archer");
-                setDamage(7);
-                setHealth(18);
-                setMoney(20);
+                initPlayer("Samurai",7,18,20);
                 break;
             // knight selected
             case 3:
-                setCharName("Knight");
-                setDamage(8);
-                setHealth(24);
-                setMoney(5);
+                initPlayer("Knight",8,24,5);
                 break;
                 // samurai is default character
             default:
-                setCharName("Samurai");
-                setDamage(5);
-                setHealth(21);
-                setMoney(15);
+                initPlayer("Samurai",5,21,15);
                 break;
         }
         System.out.println("Your  character has been created.");
         System.out.println("Character : "+getCharName()+", Damage : "+getDamage()+", Health : "+getHealth()+", Money : "+getMoney());
+    }
+
+    public void initPlayer(String charName, int damage, int health, int money) {
+        setCharName(charName);
+        setDamage(damage);
+        setHealth(health);
+        setMoney(money);
     }
 
     public int charMenu() {
